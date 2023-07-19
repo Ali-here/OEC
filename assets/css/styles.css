@@ -1,0 +1,2657 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  /*===== Colores =====*/
+  --first-color: #4C7BC1;
+  --primary-color: #072D66;
+  --dark-color: #070D1F;
+  --dark-color-alt: #282B3A;
+  --white-color: #E6E7E9;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+.header_scrol {
+  background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*===== HEADER =====*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1.5rem;
+  background-color: var(--primary-color);
+  z-index: var(--z-fixed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  color: var(--white-color);
+}
+.header__toggle {
+  font-size: 1.5rem;
+  color: #454545;
+  cursor: pointer;
+}
+
+/*===== NAV =====*/
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: white;
+    color: var(--white-color);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 0;
+    z-index: var(--z-fixed);
+    transition: 0.5s;
+  }
+  main #hero {
+    margin-left: 0;
+    width: 100%;
+    background-image: url(../img/bg2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 54rem;
+  }
+  main #hero ::-moz-placeholder {
+    color: white;
+  }
+  main #hero ::placeholder {
+    color: white;
+  }
+  main #hero #div1 #div2 #div3 {
+    display: flex;
+    justify-content: center;
+  }
+  main #hero #div1 #div2 #div3 .itm1 {
+    margin-top: -14rem;
+  }
+  main #hero #div1 #div2 #div3 .itm1 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button {
+    margin: 18px 0 46px 0;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3 {
+    color: var(--First-color);
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 29px;
+    padding: 15px 18px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 {
+    color: var(--white-color);
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    width: 100%;
+    border-radius: 29px;
+    padding: 15px 18px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 span img {
+    width: 22px;
+    padding: 3px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4:hover {
+    background-color: transparent;
+    color: white;
+    border-color: var(--white-color);
+  }
+  main #hero #div1 #scroll-btn .scroll-content img {
+    position: relative;
+  }
+  main #hero #div1 #our_products .maindiv {
+    background-color: #F3F3F3;
+    border-radius: 8px;
+  }
+  main #hero #div1 #our_products .maindiv img {
+    padding: 33px;
+  }
+  main #herobg {
+    background-image: url(../img/bg1.png);
+    margin-left: 0;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 44rem;
+    margin: -38rem 0 0 0;
+  }
+  main #partner {
+    margin-top: 36px;
+  }
+  main #partner #div1 #div2 h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #partner #div3 #image {
+    margin-top: 27px;
+  }
+  main #cards {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+  }
+  main #cards #div1 #card1 {
+    width: 290px;
+    height: 74px;
+    background: #5D87C5;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 30px;
+  }
+  main #cards #div1 #card1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+  main #cards #div1 #card2 {
+    width: 289px;
+    height: 74px;
+    background: #454545;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 30px;
+  }
+  main #cards #div1 #card2 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+  main #cards #div1 #card2 img {
+    display: none;
+  }
+  main #more__about {
+    margin: 6rem 1rem 0 1rem;
+  }
+  main #more__about #div1 #div2 #img-div {
+    padding: 3rem 0px;
+  }
+  main #more__about #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #more__about #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8B8B8B;
+  }
+  main #more__about #div1 #div2 #img-div .para p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+    padding: 28px 31px 0 0;
+    text-align: justify;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button {
+    margin: 31px 0 0px 0;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 42%;
+    padding: 9px 18px;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #services {
+    margin: 0rem 1rem 0 1rem;
+  }
+  main #services #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #454545;
+  }
+  main #services #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 {
+    border-radius: 8px;
+    padding: 36px 0;
+    height: 460px;
+    margin: 15px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 .imgdiv {
+    padding: 33px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv {
+    padding: 0 6px 20px 10px;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #services #div1 #div4 #card2 .card1 {
+    border-radius: 8px;
+    padding: 36px 0;
+    height: 460px;
+  }
+  main #services #div1 #div4 #card2 .card1 .imgdiv {
+    padding: 0px 0;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv {
+    padding: 0 6px 20px 10px;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #ourcouses {
+    margin: 7rem 0rem 0 0rem;
+    padding-bottom: 7rem;
+    background-color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #FFFFFF;
+  }
+  main #ourcouses #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 25px 0;
+  }
+  main #ourcouses #div1 #div3 .itmnav {
+    height: 81px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 30px;
+  }
+  main #ourcouses #div1 #div3 .itmnav .list {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list .active {
+    background-color: #5D87C5;
+    color: white;
+  }
+  main #ourcouses #div1 #div3 .itmnav .list .active:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list a {
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 0 8px;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  main #ourcouses #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 {
+    background-color: white;
+    border-radius: 8px;
+    padding: 36px 0;
+    margin: 15px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv {
+    padding: 33px 33px 0 33px;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv h3 span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #A0AAAF;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv {
+    padding: 33px 0 0 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    padding: 8px 0;
+    color: #5D87C5;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #ourcouses #div1 #div5 div .course_button {
+    margin: 31px 0 0px 0;
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3 {
+    color: var(--primary-color);
+    border-radius: 21px;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #bannerbg #div1 {
+    padding: 4rem 0rem 8rem 0rem;
+    background-image: url(../img/bg3.png);
+    background-repeat: no-repeat;
+  }
+  main #bannerbg #div1 #div2 #div3 {
+    padding: 63px 0 0 0;
+  }
+  main #bannerbg #div1 #div2 #div3 h2 {
+    font-family: "outfit", Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+  main #bannerbg #div1 #div2 #div3 p {
+    padding: 0 40px;
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button {
+    margin: 36px 0 0 0;
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3 {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-color: var(--primary-color);
+    padding: 9px 36px;
+    border-radius: 5px;
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3:hover {
+    background-color: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 138% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  main #career {
+    margin: 3rem 1rem 4rem 1rem;
+  }
+  main #career #div1 #div2 #img-div {
+    padding: 3rem 0px;
+  }
+  main #career #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #career #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8B8B8B;
+  }
+  main #career #div1 #div2 #img-div .para p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+    padding: 28px 31px 0 0;
+    text-align: justify;
+  }
+  main #career #div1 #div2 #img-div .para .about_button {
+    margin: 31px 0 0px 0;
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #testi {
+    margin: 3rem 1rem 0 1rem;
+  }
+  main #testi #div1 #div2 .card1 {
+    background: #F8F8F8;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 15px 0;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div p span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: rgba(69, 69, 69, 0.5);
+  }
+  main #testi #div1 #div2 .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #divbtn {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 100%);
+    position: relative;
+    top: -26rem;
+    height: 429.38px;
+    padding: 135px 0 0 0;
+  }
+  main #testi #div1 #divbtn .career_button {
+    margin: 31px 0 0px 0;
+  }
+  main #testi #div1 #divbtn .career_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  main #testi #div1 #divbtn .career_button .btn3:hover {
+    background-color: var(--white-color);
+    color: #4C7CDE;
+    border-color: var(--white-color);
+  }
+  main #testi #div1 #divbtn .career_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #background {
+    background-color: white;
+    height: 9rem;
+    position: relative;
+    top: -38rem;
+  }
+  main #events {
+    margin: -41rem 1rem 0 1rem;
+    /* padding-bottom: 7rem; */
+    position: relative;
+  }
+  main #events #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 68px;
+    color: #454545;
+  }
+  main #events #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #events #div1 #div4 div .card1 {
+    background: rgba(93, 135, 197, 0.1);
+    border-radius: 8px;
+    padding: 0 0 36px 0;
+  }
+  main #events #div1 #div4 div .card1 .time {
+    padding: 34px 24px 0 24px;
+  }
+  main #events #div1 #div4 div .card1 .time .div2 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #5D87C5;
+  }
+  main #events #div1 #div4 div .card1 .time .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #5D87C5;
+  }
+  main #events #div1 #div4 div .card1 .textdiv {
+    padding: 11px 24px 0 24px;
+  }
+  main #events #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #454545;
+    padding: 0 48px 7px 0;
+  }
+  main #events #div1 #div4 div .card1 .textdiv h3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #4C7BC1;
+  }
+  main #events #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv {
+    padding: 33px 0 0 0;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    padding: 10px;
+    color: #5B5858;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #frequentquestion {
+    margin: 6rem 1rem 0 1rem;
+  }
+  main #frequentquestion #div1 #div2 #img-div {
+    margin: 41px 0;
+  }
+  main #frequentquestion #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 17rem 0 0;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 56px;
+    padding-top: 1px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 30px rgba(93, 135, 197, 0.15);
+    border-radius: 8px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label .faq-heading {
+    padding: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label .faq-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+    width: 95%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox] {
+    display: none;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq .faq-arrow {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.8s;
+    border-top: 3px solid var(--dark-color);
+    border-right: 3px solid var(--dark-color);
+    float: right;
+    position: relative;
+    top: -49px;
+    right: 30px;
+    transform: rotate(45deg);
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label {
+    display: block;
+    color: white;
+    height: 185px;
+    transition: height 0.2s;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label > .faq-arrow {
+    transition: transform 0.8s;
+    transform: rotate(135deg);
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label > .faq-heading {
+    font-weight: 800;
+    font-size: 14px;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:not(:checked) + label {
+    display: block;
+    transition: height 0.8s;
+    height: 60px;
+    background: #E4E4E4;
+    margin: 0 0 10px 0;
+  }
+  #contact {
+    margin: 6rem 0 0 0;
+    padding: 0rem 1rem 0rem 1rem;
+    background-image: url(../img/contactbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #contact #div1 #div2 .div4 {
+    padding: 7rem 0 8rem 0;
+  }
+  #contact #div1 #div2 .div4 .sec1 div h1 {
+    font-family: outfit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #contact #div1 #div2 .div4 .sec2 {
+    margin: 43px 0;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea {
+    position: relative;
+    color: black;
+    background: transparent;
+    padding: 16px 5px;
+    font-style: normal;
+    font-size: 15.24px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea::-moz-placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea::placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input {
+    height: 41px;
+    border-radius: 8x;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding: 16px 5px;
+    font-style: normal;
+    font-size: 15.24px;
+    margin: 19px 0 0 0px;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input::-moz-placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input::placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2 {
+    color: var(--primary-color);
+    background-color: white;
+    border-color: var(--primary-color);
+    padding: 13px 25px;
+    border-radius: 26px;
+    margin: 30px 0 0 0;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2:hover {
+    background-color: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  #contact #div1 .imgdiv .innerdiv img {
+    position: relative;
+    bottom: 160px;
+  }
+  #footer {
+    background-color: #454545;
+    padding: 6rem 10px 1rem 10px;
+    margin: -4rem 0 0 0;
+  }
+  #footer #div1 #row1 #icondiv {
+    display: flex;
+    justify-content: center;
+  }
+  #footer #div1 #row1 #icondiv a img {
+    padding: 10px;
+  }
+  #footer #div1 .dashed-line {
+    border-bottom: 3px dashed #848FA0;
+    margin: 55px 0;
+  }
+  #footer #div1 #row2 {
+    margin: 7rem 0;
+  }
+  #footer #div1 #row2 .div1 .div2 h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 29px 0 4px 0;
+  }
+  #footer #div1 #row2 .div1 .div2 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  #footer #div1 #row3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+  }
+  #footer #div1 #row3 span {
+    color: #5D87C5;
+  }
+}
+.nav__content {
+  height: 80%;
+  grid-template-rows: max-content 1fr max-content;
+  row-gap: 2rem;
+}
+.nav__close {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.3rem;
+  padding: 0.25rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav__menu {
+  align-self: center;
+}
+.nav__item {
+  margin: 2.5rem 0;
+}
+.nav__link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: White;
+}
+.nav__social .btn2 {
+  color: var(--white-color);
+  border-radius: 21px;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 28%;
+  padding: 9px 18px;
+}
+.nav__social .btn2:hover {
+  background-color: transparent;
+  color: #4C7CDE;
+  border-color: var(--primary-color);
+}
+.nav__social .btn2 span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/*Aparecer menu*/
+.show {
+  left: 0;
+}
+
+/*Active menu*/
+.active {
+  color: #454545;
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .header {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .header__logo, .header__toggle {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav__content {
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    -moz-column-gap: 37rem;
+         column-gap: 37rem;
+    justify-content: space-between;
+  }
+  .nav__close, .nav__profesion {
+    display: none;
+  }
+  .nav__perfil {
+    display: flex;
+    align-items: center;
+  }
+  .nav__img {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    align-items: center;
+  }
+  .nav__img img {
+    width: 26px;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin: 0 0.25rem;
+    display: flex;
+    align-items: center;
+  }
+  .nav__item .btn2 {
+    color: var(--primary-color);
+    border-radius: 21px;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100;
+    padding: 9px 18px;
+  }
+  .nav__item .btn2:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  .nav__item .btn2 span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #5D87C5;
+  }
+  .nav__link {
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.25rem;
+  }
+  .nav__link:hover {
+    color: #454545;
+  }
+  main #hero {
+    margin-left: 0;
+    width: 100%;
+    background-image: url(../img/bg2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 54rem;
+  }
+  main #hero ::-moz-placeholder {
+    color: white;
+  }
+  main #hero ::placeholder {
+    color: white;
+  }
+  main #hero #div1 #div2 #div3 {
+    display: flex;
+    justify-content: center;
+  }
+  main #hero #div1 #div2 #div3 .itm1 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 20px 14rem;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button {
+    margin: 18px 0 46px 0;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3 {
+    color: var(--First-color);
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    border-radius: 29px;
+    padding: 15px 18px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 {
+    color: var(--white-color);
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    width: 100%;
+    border-radius: 29px;
+    padding: 15px 18px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4 span img {
+    width: 22px;
+    padding: 3px;
+  }
+  main #hero #div1 #div2 #div3 .itm1 .hero_button .btn4:hover {
+    background-color: transparent;
+    color: white;
+    border-color: var(--white-color);
+  }
+  main #hero #div1 #scroll-btn .scroll-content img {
+    position: relative;
+  }
+  main #hero #div1 #our_products .maindiv {
+    background-color: #F3F3F3;
+    border-radius: 8px;
+  }
+  main #hero #div1 #our_products .maindiv img {
+    padding: 33px;
+  }
+  main #herobg {
+    background-image: url(../img/bg1.png);
+    margin-left: 0;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 44rem;
+    margin: -38rem 0 0 0;
+  }
+  main #partner {
+    margin-top: 36px;
+  }
+  main #partner #div1 #div2 h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #partner #div3 #image {
+    margin-top: 27px;
+  }
+  main #cards {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+  }
+  main #cards #div1 #card1 {
+    width: 290px;
+    height: 74px;
+    background: #5D87C5;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  main #cards #div1 #card1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+  main #cards #div1 #card2 {
+    width: 596px;
+    height: 74px;
+    background: #454545;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 30px;
+  }
+  main #cards #div1 #card2 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+  main #cards #div1 #card2 img {
+    position: relative;
+    left: 21rem;
+    top: -84px;
+  }
+  main #more__about {
+    margin: 0rem 7rem 0 7rem;
+  }
+  main #more__about #div1 #div2 #img-div {
+    padding: 3rem 0px;
+  }
+  main #more__about #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #more__about #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8B8B8B;
+  }
+  main #more__about #div1 #div2 #img-div .para p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+    padding: 28px 31px 0 0;
+    text-align: justify;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button {
+    margin: 31px 0 0px 0;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 28%;
+    padding: 9px 18px;
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #more__about #div1 #div2 #img-div .para .about_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #services {
+    margin: 0rem 7rem 11rem 7rem;
+  }
+  main #services #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #454545;
+  }
+  main #services #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 {
+    border-radius: 8px;
+    padding: 36px 0;
+    height: 460px;
+  }
+  main #services #div1 #div4 #img-div .card1 .imgdiv {
+    padding: 33px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv {
+    padding: 0 31px 33px 31px;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #services #div1 #div4 #img-div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #services #div1 #div4 #card2 .card1 {
+    border-radius: 8px;
+    padding: 36px 0;
+    height: 460px;
+  }
+  main #services #div1 #div4 #card2 .card1 .imgdiv {
+    padding: 33px 0;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv {
+    padding: 0 41px 33px 41px;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #services #div1 #div4 #card2 .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #ourcouses {
+    margin: 7rem 0rem 0 0rem;
+    padding-bottom: 7rem;
+    background-color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #FFFFFF;
+  }
+  main #ourcouses #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 25px 0;
+  }
+  main #ourcouses #div1 #div3 .itmnav {
+    height: 81px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 30px;
+  }
+  main #ourcouses #div1 #div3 .itmnav .list {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list .active {
+    background-color: #5D87C5;
+    color: white;
+  }
+  main #ourcouses #div1 #div3 .itmnav .list .active:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list a {
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 0 8px;
+    color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div3 .itmnav .list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  main #ourcouses #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 {
+    background-color: white;
+    border-radius: 8px;
+    padding: 36px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv {
+    padding: 33px 33px 0 33px;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv h3 span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #A0AAAF;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv {
+    padding: 33px 0 0 0;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    padding: 8px 0;
+    color: #5D87C5;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #ourcouses #div1 #div5 div .course_button {
+    margin: 31px 0 0px 0;
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3 {
+    color: var(--primary-color);
+    border-radius: 21px;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  main #ourcouses #div1 #div5 div .course_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #bannerbg #div1 {
+    padding: 4rem 0rem 8rem 0rem;
+    background-image: url(../img/bg3.png);
+    background-repeat: no-repeat;
+  }
+  main #bannerbg #div1 #div2 #div3 {
+    padding: 63px 0 0 0;
+  }
+  main #bannerbg #div1 #div2 #div3 h2 {
+    font-family: "outfit", Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button {
+    margin: 36px 0 0 0;
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3 {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-color: var(--primary-color);
+    padding: 9px 36px;
+    border-radius: 5px;
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3:hover {
+    background-color: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+  }
+  main #bannerbg #div1 #div2 #div3 .banner_button a .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 138% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  main #career {
+    margin: 3rem 7rem 4rem 7rem;
+  }
+  main #career #div1 #div2 #img-div {
+    padding: 3rem 0px;
+  }
+  main #career #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #career #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8B8B8B;
+  }
+  main #career #div1 #div2 #img-div .para p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+    padding: 28px 31px 0 0;
+    text-align: justify;
+  }
+  main #career #div1 #div2 #img-div .para .about_button {
+    margin: 31px 0 0px 0;
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 28%;
+    padding: 9px 18px;
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #career #div1 #div2 #img-div .para .about_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #testi {
+    margin: 3rem 7rem 0 7rem;
+  }
+  main #testi #div1 #div2 .card1 {
+    background: #F8F8F8;
+    border-radius: 8px;
+    padding: 32px;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #div2 .card1 .imgdiv div p span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: rgba(69, 69, 69, 0.5);
+  }
+  main #testi #div1 #div2 .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  main #testi #div1 #divbtn {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 100%);
+    position: relative;
+    top: -26rem;
+    height: 429.38px;
+    padding: 135px 0 0 0;
+  }
+  main #testi #div1 #divbtn .career_button {
+    margin: 31px 0 0px 0;
+  }
+  main #testi #div1 #divbtn .career_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  main #testi #div1 #divbtn .career_button .btn3:hover {
+    background-color: var(--white-color);
+    color: #4C7CDE;
+    border-color: var(--white-color);
+  }
+  main #testi #div1 #divbtn .career_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #background {
+    background-color: white;
+    height: 9rem;
+    position: relative;
+    top: -38rem;
+  }
+  main #events {
+    margin: -41rem 0rem 0 0rem;
+    /* padding-bottom: 7rem; */
+    position: relative;
+  }
+  main #events #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 68px;
+    color: #454545;
+  }
+  main #events #div1 #div4 {
+    margin: 60px 0;
+  }
+  main #events #div1 #div4 div .card1 {
+    background: rgba(93, 135, 197, 0.1);
+    border-radius: 8px;
+    padding: 0 0 36px 0;
+    width: 392px;
+  }
+  main #events #div1 #div4 div .card1 .time {
+    padding: 34px 24px 0 24px;
+  }
+  main #events #div1 #div4 div .card1 .time .div2 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #5D87C5;
+  }
+  main #events #div1 #div4 div .card1 .time .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #5D87C5;
+  }
+  main #events #div1 #div4 div .card1 .textdiv {
+    padding: 11px 24px 0 24px;
+  }
+  main #events #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #454545;
+    padding: 0 48px 7px 0;
+  }
+  main #events #div1 #div4 div .card1 .textdiv h3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #4C7BC1;
+  }
+  main #events #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv {
+    padding: 33px 0 0 0;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    padding: 10px;
+    color: #5B5858;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  main #events #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  main #frequentquestion {
+    margin: -39rem 7rem 0 7rem;
+  }
+  main #frequentquestion #div1 #div2 #img-div {
+    margin: 41px 0;
+  }
+  main #frequentquestion #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 17rem 0 0;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 56px;
+    padding-top: 1px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 30px rgba(93, 135, 197, 0.15);
+    border-radius: 8px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label .faq-heading {
+    padding: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq label .faq-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+    width: 95%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox] {
+    display: none;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq .faq-arrow {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.8s;
+    border-top: 3px solid var(--dark-color);
+    border-right: 3px solid var(--dark-color);
+    float: right;
+    position: relative;
+    top: -49px;
+    right: 30px;
+    transform: rotate(45deg);
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label {
+    display: block;
+    color: white;
+    height: 185px;
+    transition: height 0.2s;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label > .faq-arrow {
+    transition: transform 0.8s;
+    transform: rotate(135deg);
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:checked + label > .faq-heading {
+    font-weight: 800;
+    font-size: 14px;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  main #frequentquestion #div1 #div2 #img-div .Dropdowns #all_container .faq input[type=checkbox]:not(:checked) + label {
+    display: block;
+    transition: height 0.8s;
+    height: 60px;
+    background: #E4E4E4;
+    margin: 0 0 10px 0;
+  }
+  #ourcouses #ourcouses {
+    margin: 4rem 0rem 0 0rem;
+    padding-bottom: 7rem;
+    background-color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #FFFFFF;
+  }
+  #ourcouses #ourcouses #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 25px 0;
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav {
+    height: 81px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 30px;
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav .list {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav .list .active {
+    background-color: #5D87C5;
+    color: white;
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav .list .active:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav .list a {
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 0 8px;
+    color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div3 .itmnav .list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  #ourcouses #ourcouses #div1 #div6 {
+    margin: 3rem 0 0 0;
+  }
+  #ourcouses #ourcouses #div1 #div6 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #FFFFFF;
+  }
+  #ourcouses #ourcouses #div1 #div6 .itmnav {
+    height: 81px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 30px;
+  }
+  #ourcouses #ourcouses #div1 #div6 .itmnav .list {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+  }
+  #ourcouses #ourcouses #div1 #div6 .itmnav .list a {
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 0 8px;
+    color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div6 .itmnav .list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  #ourcouses #ourcouses #div1 #div4 {
+    margin: 26px 0;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 {
+    background-color: white;
+    border-radius: 8px;
+    padding: 36px 0;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv {
+    padding: 33px 33px 0 33px;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+    padding: 0 0 10px 0;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv h3 span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #A0AAAF;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv .btndiv {
+    padding: 33px 0 0 0;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div1 h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    padding: 8px 0;
+    color: #5D87C5;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  #ourcouses #ourcouses #div1 #div4 div .card1 .textdiv .btndiv .div2 .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #ourcouses #ourcouses #div1 #div5 div .course_button {
+    margin: 31px 0 0px 0;
+  }
+  #ourcouses #ourcouses #div1 #div5 div .course_button .btn3 {
+    color: var(--primary-color);
+    border-radius: 21px;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  #ourcouses #ourcouses #div1 #div5 div .course_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  #ourcouses #ourcouses #div1 #div5 div .course_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #aboutus #more__about {
+    margin: 0rem 7rem 0 7rem;
+  }
+  #aboutus #more__about #div1 #div2 #img-div {
+    padding: 3rem 0px;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .content p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8B8B8B;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .para p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+    padding: 28px 31px 0 0;
+    text-align: justify;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .para .about_button {
+    margin: 31px 0 0px 0;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .para .about_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 28%;
+    padding: 9px 18px;
+  }
+  #aboutus #more__about #div1 #div2 #img-div .para .about_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  #aboutus #more__about #div1 #div2 #img-div .para .about_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #blogs #blogs {
+    margin: 4rem 0rem 0 0rem;
+    padding-bottom: 7rem;
+    background-color: var(--primary-color);
+  }
+  #blogs #blogs #div1 #div2 #img-div .content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    padding: 0 27px;
+    color: #FFFFFF;
+  }
+  #blogs #blogs #div1 #div2 #img-div .content #innerbg {
+    background-image: url(../img/Group406.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 177px;
+  }
+  #blogs #blogs #div1 #div2 #img-div .content #innerbg h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
+  #blogs #blogs #div1 #div2 #img-div .content #innerbg p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 25px 68px;
+  }
+  #blogs #blogs #div1 #div3 .itmnav {
+    height: 81px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 30px;
+  }
+  #blogs #blogs #div1 #div3 .itmnav .list {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+  }
+  #blogs #blogs #div1 #div3 .itmnav .list .active {
+    background-color: #5D87C5;
+    color: white;
+  }
+  #blogs #blogs #div1 #div3 .itmnav .list .active:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  #blogs #blogs #div1 #div3 .itmnav .list a {
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 0 8px;
+    color: var(--primary-color);
+  }
+  #blogs #blogs #div1 #div3 .itmnav .list a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  #blogs #blogs #div1 #div6 {
+    margin: 3rem 0 0 0;
+  }
+  #blogs #blogs #div1 #div6 #div2 #img-div h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  #blogs #blogs #div1 #div4 {
+    margin: 26px 0;
+  }
+  #blogs #blogs #div1 #div4 div .card1 {
+    background-color: white;
+    border-radius: 8px;
+    padding: 36px 0;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .btndiv {
+    padding: 29px 46px 0 46px;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .btndiv .div1 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #A0AAAF;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .btndiv .div2 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #A0AAAF;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv {
+    padding: 13px 33px 0 33px;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #454545;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #454545;
+    padding-bottom: 20px;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv .card_button .btn3 {
+    color: var(--white-color);
+    border-radius: 21px;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    padding: 8px 16px;
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv .card_button .btn3:hover {
+    background-color: transparent;
+    color: #4C7CDE;
+    border-color: var(--primary-color);
+  }
+  #blogs #blogs #div1 #div4 div .card1 .textdiv .card_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #blogs #blogs #div1 #div5 div .course_button {
+    margin: 31px 0 0px 0;
+  }
+  #blogs #blogs #div1 #div5 div .course_button .btn3 {
+    color: var(--primary-color);
+    border-radius: 21px;
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+    width: 100%;
+    padding: 9px 18px;
+  }
+  #blogs #blogs #div1 #div5 div .course_button .btn3:hover {
+    background-color: var(--first-color);
+    color: white;
+    border-color: var(--first-color);
+  }
+  #blogs #blogs #div1 #div5 div .course_button .btn3 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  #contact {
+    margin: 6rem 0 0 0;
+    padding: 0rem 7rem 0rem 7rem;
+    background-image: url(../img/contactbg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #contact #div1 #div2 .div4 {
+    padding: 7rem 0 8rem 0;
+  }
+  #contact #div1 #div2 .div4 .sec1 div h1 {
+    font-family: outfit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #contact #div1 #div2 .div4 .sec2 {
+    margin: 43px 0;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea {
+    position: relative;
+    color: black;
+    background: transparent;
+    padding: 16px 5px;
+    font-style: normal;
+    font-size: 15.24px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea::-moz-placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form textarea::placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input {
+    height: 41px;
+    border-radius: 8x;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding: 16px 5px;
+    font-style: normal;
+    font-size: 15.24px;
+    margin: 19px 0 0 0px;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input::-moz-placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form input::placeholder {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2 {
+    color: var(--primary-color);
+    background-color: white;
+    border-color: var(--primary-color);
+    padding: 13px 25px;
+    border-radius: 26px;
+    margin: 30px 0 0 0;
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2:hover {
+    background-color: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+  }
+  #contact #div1 #div2 .div4 .sec2 div .form form .button .sec1_button .out_btn2 .btn2 span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  #contact #div1 .imgdiv .innerdiv img {
+    position: relative;
+    bottom: 160px;
+  }
+  #footer {
+    background-color: #454545;
+    padding: 6rem 10px 1rem 10px;
+    margin: -4rem 0 0 0;
+  }
+  #footer #div1 #row1 #icondiv {
+    display: flex;
+    justify-content: start;
+  }
+  #footer #div1 #row1 #icondiv a img {
+    padding: 10px;
+  }
+  #footer #div1 .dashed-line {
+    border-bottom: 3px dashed #848FA0;
+    margin: 55px 0;
+  }
+  #footer #div1 #row2 {
+    margin: 7rem 0;
+  }
+  #footer #div1 #row2 .div1 .div2 h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 29px 0 4px 0;
+  }
+  #footer #div1 #row2 .div1 .div2 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  #footer #div1 #row3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+  }
+  #footer #div1 #row3 span {
+    color: #5D87C5;
+  }
+  .active {
+    color: #454545;
+  }
+}/*# sourceMappingURL=styles.css.map */
