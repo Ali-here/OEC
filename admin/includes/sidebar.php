@@ -86,11 +86,6 @@ confirm_logged_in();
         Tables
       </div>
       <!-- Tables Buttons -->
-      <li class="nav-item">
-        <a class="nav-link" href="ourteam.php">
-          <i class="fas fa-fw fa-users"></i>
-          <span>Our Team</span></a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="employee.php">
@@ -98,29 +93,6 @@ confirm_logged_in();
           <span>Employee</span></a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="portfolio.php">
-          <i class="fas fa-fw fa-briefcase"></i>
-          <span>Portfolio</span></a>
-      </li>
-
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="services.php">
-          <i class="fas fa-fw fa-cogs"></i>
-          <span>Services</span></a>
-      </li> -->
-
-      <li class="nav-item">
-        <a class="nav-link" href="clients.php">
-          <i class="fas fa-fw fa-search"></i>
-          <span>Clients Review</span></a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="category.php">
-          <i class="fas fa-fw fa-cogs"></i>
-          <span>Categories</span></a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="user.php">
