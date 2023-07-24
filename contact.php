@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <title>EB First Aid</title>
+    <title>OEC</title>
     <link rel="icon" href="./assets/img/icon.png" type="image">
 
 </head>
@@ -39,18 +39,18 @@
 
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
-                        <li class="nav__item"><a href="aboutus.html" class="nav__link ">About Us</a></li>
-                        <li class="nav__item"><a href="contact.html" class="nav__link active">Contact</a></li>
+                        <li class="nav__item"><a href="index.php" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="aboutus.php" class="nav__link">About Us</a></li>
+                        <li class="nav__item"><a href="contact.php" class="nav__link active">Contact</a></li>
                         <li class="nav__item">
-                            <button class="btn btn2 btn-primary">
+                            <a href="./admin/pages/login.php" class="btn btn2 btn-primary">
                                 Log In
-                            </button>
+                            </a>
                         </li>
                         <li class="nav__item">
-                            <button class="btn btn2 btn-primary">
+                            <a href="./admin/pages/register.php" class="btn btn2 btn-primary">
                                 Register
-                            </button>
+                            </a>
                         </li>
 
                     </ul>
@@ -82,29 +82,24 @@
                                     <form action="" class="form-horizontal form-material text-white" method="POST">
                                         <div class="form-group mt-3">
                                             <div class="col-md-12  mt-3">
-                                                <input placeholder="Your Name" type="text" name="fullname"
-                                                    class="form-control ">
+                                                <input placeholder="Your Name" type="text" name="fullname" class="form-control ">
                                             </div>
                                         </div>
                                         <div class="form-group mt-3">
                                             <div class="col-md-12  mt-3">
-                                                <input placeholder="Your Email Address" type="email" name="email"
-                                                    class="form-control  ">
+                                                <input placeholder="Your Email Address" type="email" name="email" class="form-control  ">
                                             </div>
                                         </div>
                                         <div class="form-group mt-3">
                                             <div class="col-md-12  mt-3">
-                                                <textarea placeholder="Type the messsage here" rows="8" cols="50"
-                                                    name="content" class="form-control"></textarea>
+                                                <textarea placeholder="Type the messsage here" rows="8" cols="50" name="content" class="form-control"></textarea>
                                             </div>
                                         </div>
 
-                                        <div
-                                            class="col-md-12 col-12 item2 d-flex justify-content-center align-self-center mt-3 button">
+                                        <div class="col-md-12 col-12 item2 d-flex justify-content-center align-self-center mt-3 button">
                                             <div class="sec1_button">
                                                 <div class="out_btn2 mt-3">
-                                                    <button type="submit" name="submit"
-                                                        class="btn btn2 btn-primary btn-outline-light btn-sm text-center">
+                                                    <button type="submit" name="submit" class="btn btn2 btn-primary btn-outline-light btn-sm text-center">
                                                         <Span>
                                                             Send Message
                                                         </Span>

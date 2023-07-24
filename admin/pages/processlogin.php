@@ -16,10 +16,9 @@ if (isset($_POST['btnlogin'])) {
     <?php
   } else {
     //create some sql statement             
-    $sql = "SELECT ID,e.FIRST_NAME,e.LAST_NAME,e.GENDER,e.EMAIL,e.PHONE_NUMBER,j.JOB_TITLE,l.PROVINCE,l.CITY,t.TYPE
+    $sql = "SELECT ID,e.FIRST_NAME,e.LAST_NAME,e.EMAIL,j.JOB_TITLE,t.TYPE
         FROM  `users` u
         join `employee` e on e.EMPLOYEE_ID=u.EMPLOYEE_ID
-        JOIN `location` l ON e.LOCATION_ID=l.LOCATION_ID
         join `job` j on e.JOB_ID=j.JOB_ID
         join `type` t ON t.TYPE_ID=u.TYPE_ID
         WHERE  `USERNAME` ='" . $users . "' AND  `PASSWORD` =  '" . $h_upass . "'";
@@ -36,12 +35,8 @@ if (isset($_POST['btnlogin'])) {
         $_SESSION['MEMBER_ID']  = $found_user['ID'];
         $_SESSION['FIRST_NAME'] = $found_user['FIRST_NAME'];
         $_SESSION['LAST_NAME']  =  $found_user['LAST_NAME'];
-        $_SESSION['GENDER']  =  $found_user['GENDER'];
         $_SESSION['EMAIL']  =  $found_user['EMAIL'];
-        $_SESSION['PHONE_NUMBER']  =  $found_user['PHONE_NUMBER'];
         $_SESSION['JOB_TITLE']  =  $found_user['JOB_TITLE'];
-        $_SESSION['PROVINCE']  =  $found_user['PROVINCE'];
-        $_SESSION['CITY']  =  $found_user['CITY'];
         $_SESSION['TYPE']  =  $found_user['TYPE'];
         $AAA = $_SESSION['MEMBER_ID'];
 

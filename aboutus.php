@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <title>EB First Aid</title>
+    <title>OEC</title>
     <link rel="icon" href="./assets/img/icon.png" type="image">
 
 </head>
@@ -39,18 +39,18 @@
 
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
-                        <li class="nav__item"><a href="aboutus.html" class="nav__link active">About Us</a></li>
-                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="index.php" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="aboutus.php" class="nav__link active">About Us</a></li>
+                        <li class="nav__item"><a href="contact.php" class="nav__link">Contact</a></li>
                         <li class="nav__item">
-                            <button class="btn btn2 btn-primary">
+                            <a href="./admin/pages/login.php" class="btn btn2 btn-primary">
                                 Log In
-                            </button>
+                            </a>
                         </li>
                         <li class="nav__item">
-                            <button class="btn btn2 btn-primary">
+                            <a href="./admin/pages/register.php" class="btn btn2 btn-primary">
                                 Register
-                            </button>
+                            </a>
                         </li>
 
                     </ul>
@@ -67,8 +67,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-10 col-12" id="img-div">
                         <div class="pt-2 content " style="margin: 5rem 0;">
-                            <h2 class="text-center"
-                                style="font-style: normal; font-weight: 700; font-size: 32px;line-height: 39px;letter-spacing: 0.02em;    text-transform: capitalize;    color: #454545;">
+                            <h2 class="text-center" style="font-style: normal; font-weight: 700; font-size: 32px;line-height: 39px;letter-spacing: 0.02em;    text-transform: capitalize;    color: #454545;">
                                 About US
                             </h2>
                             <p class="d-flex justify-content-center text-center">
@@ -95,11 +94,7 @@
 
                         <div class="para">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur. Id amet enim tellus euismod. Tortor viverra
-                                suspendisse cursus purus augue
-                                turpis. Neque purus arcu rhoncus sodales et. Egestas nulla nulla habitant vulputate.
-                                Fermentum enim diam risus purus
-                                nibh interdum.
+                                Our vision is to create a thriving ecosystem where Daraz Sellers can effortlessly discover the most profitable products on our platform. We envision a future where Sellers can access real-time data and trends, allowing them to stay ahead of the competition and capitalize on emerging opportunities. By continuously innovating our data analytics tools and services, we aspire to be the go-to resource for Sellers, driving unprecedented growth and prosperity for their businesses on Daraz.
                             </p>
 
                         </div>
@@ -129,11 +124,7 @@
 
                         <div class="para">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur. Id amet enim tellus euismod. Tortor viverra
-                                suspendisse cursus purus augue
-                                turpis. Neque purus arcu rhoncus sodales et. Egestas nulla nulla habitant vulputate.
-                                Fermentum enim diam risus purus
-                                nibh interdum.
+                                Our mission is to empower Daraz Sellers by providing them with valuable insights and data-driven information about the products on our platform. We strive to offer comprehensive sell-through rates, average product prices, and other relevant metrics to help Sellers identify high-demand products. By enabling Sellers to make informed decisions, we aim to maximize their profitability and success on Daraz.
                             </p>
 
                         </div>

@@ -19,11 +19,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 <?php
   }
 }
-$query2 = 'SELECT ID, e.FIRST_NAME, e.LAST_NAME, e.GENDER, USERNAME, PASSWORD, e.EMAIL, PHONE_NUMBER, j.JOB_TITLE, e.HIRED_DATE, t.TYPE, l.PROVINCE, l.CITY
+$query2 = 'SELECT ID, e.FIRST_NAME, e.LAST_NAME,  USERNAME, PASSWORD, e.EMAIL, j.JOB_TITLE,  t.TYPE
             FROM users u
             join employee e on u.EMPLOYEE_ID = e.EMPLOYEE_ID
             join job j on e.JOB_ID=j.JOB_ID
-            join location l on e.LOCATION_ID=l.LOCATION_ID
             join type t on u.TYPE_ID=t.TYPE_ID
             WHERE ID =' . $_GET['id'];
 
@@ -32,15 +31,10 @@ while ($row = mysqli_fetch_array($result2)) {
   $zz = $row['ID'];
   $a = $row['FIRST_NAME'];
   $b = $row['LAST_NAME'];
-  $c = $row['GENDER'];
   $d = $row['USERNAME'];
   $e = $row['PASSWORD'];
   $f = $row['EMAIL'];
-  $g = $row['PHONE_NUMBER'];
-  $h = $row['JOB_TITLE'];
-  $i = $row['HIRED_DATE'];
-  $j = $row['PROVINCE'];
-  $k = $row['CITY'];
+  $g = $row['JOB_TITLE'];
   $l = $row['TYPE'];
 }
 $id = $_GET['id'];
@@ -68,18 +62,6 @@ $id = $_GET['id'];
       <div class="form-group row text-left">
         <div class="col-sm-3 text-primary">
           <h5>
-            Gender<br>
-          </h5>
-        </div>
-        <div class="col-sm-9">
-          <h5>
-            : <?php echo $c; ?> <br>
-          </h5>
-        </div>
-      </div>
-      <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
-          <h5>
             Username<br>
           </h5>
         </div>
@@ -101,18 +83,7 @@ $id = $_GET['id'];
           </h5>
         </div>
       </div>
-      <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
-          <h5>
-            Contact #<br>
-          </h5>
-        </div>
-        <div class="col-sm-9">
-          <h5>
-            : <?php echo $g; ?> <br>
-          </h5>
-        </div>
-      </div>
+      <!-- Contact # is missing here -->
       <div class="form-group row text-left">
         <div class="col-sm-3 text-primary">
           <h5>
@@ -121,43 +92,7 @@ $id = $_GET['id'];
         </div>
         <div class="col-sm-9">
           <h5>
-            : <?php echo $h; ?> <br>
-          </h5>
-        </div>
-      </div>
-      <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
-          <h5>
-            Hired Date<br>
-          </h5>
-        </div>
-        <div class="col-sm-9">
-          <h5>
-            : <?php echo $i; ?> <br>
-          </h5>
-        </div>
-      </div>
-      <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
-          <h5>
-            Province<br>
-          </h5>
-        </div>
-        <div class="col-sm-9">
-          <h5>
-            : <?php echo $j; ?> <br>
-          </h5>
-        </div>
-      </div>
-      <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
-          <h5>
-            City / Municipality<br>
-          </h5>
-        </div>
-        <div class="col-sm-9">
-          <h5>
-            : <?php echo $k; ?> <br>
+            : <?php echo $g; ?> <br>
           </h5>
         </div>
       </div>
@@ -175,7 +110,8 @@ $id = $_GET['id'];
       </div>
     </div>
   </div>
+</center>
 
-  <?php
-  include '../includes/footer.php';
-  ?>
+<?php
+include '../includes/footer.php';
+?>

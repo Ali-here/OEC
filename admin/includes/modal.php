@@ -79,32 +79,14 @@ $job .= "</select>";
           <div class="form-group">
             <input class="form-control" placeholder="Last Name" name="lastname" required>
           </div>
-          <div class="form-group">
-            <select class='form-control' name='gender' required>
-              <option value="" disabled selected hidden>Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
+
           <div class="form-group">
             <input class="form-control" placeholder="Email" name="email" required>
-          </div>
-          <div class="form-group">
-            <input class="form-control" placeholder="Phone Number" name="phonenumber" required>
           </div>
           <div class="form-group">
             <?php
             echo $job;
             ?>
-          </div>
-          <div class="form-group">
-            <input placeholder="Hired Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="FromDate" name="hireddate" class="form-control" />
-          </div>
-          <div class="form-group">
-            <select class="form-control" id="province" placeholder="Province" name="province" required></select>
-          </div>
-          <div class="form-group">
-            <select class="form-control" id="city" placeholder="City" name="city" required></select>
           </div>
           <hr>
           <button type="submit" class="btn btn-success"><i class="fa fa-check fa-fw"></i>Save</button>

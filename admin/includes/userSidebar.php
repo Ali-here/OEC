@@ -1,6 +1,6 @@
 <?php
-require('session.php');
-confirm_logged_in();
+// require('session.php');
+// confirm_logged_in();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +37,8 @@ confirm_logged_in();
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Encoderbytes Dashboard</title>
-  <link rel="icon" href="../assets/img/logo2.png">
+  <title>OEC</title>
+  <link rel="icon" href="../../assets/img/icon.png">
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -63,10 +63,10 @@ confirm_logged_in();
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon round">
           <i class="img-fluid  rounded-circle">
-            <img src="../assets/img/logo2.png" class=" rounded-circle" alt="logo" width="35px">
+            <img src="../../assets/img/logos/White-logo.png" class="" alt="logo" width="116px">
           </i>
         </div>
-        <div class="sidebar-brand-text mx-3 mt-2">EncoderBytes</div>
+        <!-- <div class="sidebar-brand-text mx-3 mt-2">EncoderBytes</div> -->
       </a>
 
       <!-- Divider -->
@@ -82,13 +82,13 @@ confirm_logged_in();
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         Tables
-      </div>
+      </div> -->
       <!-- Tables Buttons -->
 
       <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
+      <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">

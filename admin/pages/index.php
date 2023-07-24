@@ -1,8 +1,35 @@
 <?php
 include '../includes/connection.php';
-include '../includes/sidebar.php';
-?>
+require('session.php');
+confirm_logged_in();
 
+$query = 'SELECT ID, t.TYPE
+            FROM users u
+            JOIN type t ON t.TYPE_ID=u.TYPE_ID WHERE ID = ' . $_SESSION['MEMBER_ID'] . '';
+$result = mysqli_query($db, $query);
+
+while ($row = mysqli_fetch_assoc($result)) {
+  $Aa = $row['TYPE'];
+
+  if ($Aa == 'User') {
+
+    include '../includes/userSidebar.php';
+  } else {
+    include '../includes/sidebar.php';
+  }
+}
+
+$sql = "SELECT DISTINCT TYPE, TYPE_ID FROM type order by TYPE_ID asc";
+$result = mysqli_query($db, $sql) or die("Bad SQL: $sql");
+
+$opt = "<select class='form-control' name='type'>
+        <option>Select Type</option>";
+while ($row = mysqli_fetch_assoc($result)) {
+  $opt .= "<option value='" . $row['TYPE_ID'] . "'>" . $row['TYPE'] . "</option>";
+}
+
+$opt .= "</select>";
+?>
 <div class="">
   <div class="row">
     <div class="col-md-12">
@@ -55,7 +82,7 @@ if (isset($_GET['search'])) {
 
   $query =
     "SELECT products.id, products.Title, products.Price, products.Shipping_Cost, products.cat_id, 
-    products.Rating, products.1st_week_Stock, products.2nd_week_Stock, products.3rd_week_Stock,
+    products.Rating, products.url,  products.image, products.1st_week_Stock, products.2nd_week_Stock, products.3rd_week_Stock,
     products.4th_week_Stock, products.5th_week_Stock, products.6th_week_Stock, products.7th_week_Stock,
     products.8th_week_Stock, products.1st_week_stockout, products.2nd_week_stockout, products.3rd_week_stockout,
     products.4th_week_stockout, products.5th_week_stockout, products.6th_week_stockout, products.7th_week_stockout,
@@ -65,7 +92,7 @@ if (isset($_GET['search'])) {
     (SELECT MAX(p.price) FROM products p WHERE p.cat_id = products.cat_id AND p.price IS NOT NULL) AS max_price
     FROM products 
     LEFT JOIN category ON products.cat_id = category.cat_id 
-    WHERE category.cat_name LIKE '%$filtervalues%' AND products.cat_id IS NOT NULL;";
+    WHERE category.cat_name LIKE '%$filtervalues%' OR products.title LIKE '%$filtervalues%' AND products.cat_id IS NOT NULL;";
 
   $query_run = mysqli_query($db, $query);
 
@@ -73,6 +100,7 @@ if (isset($_GET['search'])) {
     foreach ($query_run as $items) {
       $id = $items['id'];
       $title = $items['Title'];
+      $image = $items['image'];
       $price = $items['Price'];
       $rating = $items['Rating'];
       $shipping_cost = $items['Shipping_Cost'];
@@ -382,12 +410,6 @@ if (isset($_GET['search'])) {
                   Total Sold
                 </th>
                 <th>
-                  Sell-through
-                </th>
-                <th>
-                  Total Listings
-                </th>
-                <th>
                   Total item sales
                 </th>
               </tr>
@@ -398,6 +420,7 @@ if (isset($_GET['search'])) {
                 $title = $items['Title'];
                 $price = $items['Price'];
                 $rating = $items['Rating'];
+                $image = $items['image'];
                 $shipping_cost = $items['Shipping_Cost'];
                 $Week1Stock = $items['1st_week_Stock'];
                 $Week2Stock = $items['2nd_week_Stock'];
@@ -415,6 +438,7 @@ if (isset($_GET['search'])) {
                 $Week6Stockout = $items['6th_week_stockout'];
                 $Week7Stockout = $items['7th_week_stockout'];
                 $Week8Stockout = $items['8th_week_stockout'];
+                $url = $items['url'];
 
                 $totalStockout = $Week1Stockout + $Week2Stockout + $Week3Stockout + $Week4Stockout + $Week5Stockout + $Week6Stockout + $Week7Stockout + $Week8Stockout;
                 $totalStock = $Week1Stock + $Week2Stock + $Week3Stock + $Week4Stock + $Week5Stock + $Week6Stock + $Week7Stock + $Week8Stock;
@@ -424,7 +448,18 @@ if (isset($_GET['search'])) {
                 $maxPrice = $items['max_price'];
               ?>
                 <tr>
-                  <td><?= $title ?></td>
+                  <td>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="../../assets/img/products/<?= $image ?>" alt="Product Image" style="width: 76px;">
+                      </div>
+                      <div class="col-md-9">
+                        <a href="<?= $url ?>">
+                          <?= $title ?>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
                   <td>Rs.<?= $price; ?></td>
                   <td>Rs.<?= $price; ?></td>
                   <td>Rs.<?= $shipping_cost; ?></td>

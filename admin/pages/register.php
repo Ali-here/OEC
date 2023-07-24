@@ -15,8 +15,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Encoderbytes Dashboard</title>
-    <link rel="icon" href="../assets/img/logo2.png">
+    <title>OEC</title>
+    <link rel="icon" href="../../assets/img/icon.png">
+
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -42,20 +43,23 @@
                             <div class="col-lg-9">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Encoderbytes Admin Panel</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Registration Form</h1>
                                     </div>
-                                    <form class="user" role="form" action="processlogin.php" method="post">
+                                    <form class="user" role="form" action="registerprocess.php" method="post">
                                         <div class="form-group">
-                                            <input class="form-control form-control-user" placeholder="Username" name="user" type="text" autofocus>
+                                            <input class="form-control form-control-user" placeholder="First Name" name="firstname" type=" text" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-user" placeholder="Last Name" name="lastname" type="text" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-user" placeholder="Username" name="username" type="text" autofocus>
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control form-control-user" placeholder="Email" name="email" type="email" value="">
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control form-control-user" placeholder="Password" name="password" type="password" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control form-control-user" placeholder="confirm Password" name="password" type="password" value="">
                                         </div>
 
                                         <button class="btn btn-primary btn-user btn-block" type="submit" name="btnlogin">Create Account</button>
@@ -77,7 +81,7 @@
 
     </div>
 
-    <footer class="footer text-center mt-5"> &COPY <?php echo date('Y'); ?> Made with ❤️ by <a href="https://www.encoderbytes.com/">Encoder Bytes.</a> All Rights
+    <footer class="footer text-center mt-5"> &COPY <?php echo date('Y'); ?> Made with ❤️ by <a href="../../index.php">OEC</a> All Rights
         Reserved.
     </footer>
     <!-- Bootstrap core JavaScript-->

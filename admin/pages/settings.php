@@ -1,6 +1,8 @@
 <?php
+require('session.php');
+confirm_logged_in();
+
 include '../includes/connection.php';
-include '../includes/sidebar.php';
 $query = 'SELECT ID, t.TYPE
             FROM users u
             JOIN type t ON t.TYPE_ID=u.TYPE_ID WHERE ID = ' . $_SESSION['MEMBER_ID'] . '';
@@ -10,13 +12,9 @@ while ($row = mysqli_fetch_assoc($result)) {
   $Aa = $row['TYPE'];
 
   if ($Aa == 'User') {
-?>
-    <script type="text/javascript">
-      //then it will be redirected
-      // alert("Restricted Page! You will be redirected to POS");
-      window.location = "index.php";
-    </script>
-<?php
+    include '../includes/userSidebar.php';
+  } else {
+    include '../includes/sidebar.php';
   }
 }
 
@@ -31,11 +29,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 $opt .= "</select>";
 
-$query = "SELECT ID, e.FIRST_NAME, e.LAST_NAME, e.GENDER, USERNAME, PASSWORD, e.EMAIL, PHONE_NUMBER, j.JOB_TITLE, e.HIRED_DATE, t.TYPE, l.PROVINCE, l.CITY
+$query = "SELECT ID, e.FIRST_NAME, e.LAST_NAME, USERNAME, PASSWORD, e.EMAIL,  j.JOB_TITLE,  t.TYPE
                       FROM users u
                       join employee e on u.EMPLOYEE_ID = e.EMPLOYEE_ID
                       join job j on e.JOB_ID=j.JOB_ID
-                      join location l on e.LOCATION_ID=l.LOCATION_ID
                       join type t on u.TYPE_ID=t.TYPE_ID
                       WHERE ID =" . $_SESSION['MEMBER_ID'];
 $result = mysqli_query($db, $query) or die(mysqli_error($db));
@@ -43,15 +40,10 @@ while ($row = mysqli_fetch_array($result)) {
   $zz = $row['ID'];
   $a = $row['FIRST_NAME'];
   $b = $row['LAST_NAME'];
-  $c = $row['GENDER'];
   $d = $row['USERNAME'];
   $e = $row['PASSWORD'];
   $f = $row['EMAIL'];
-  $g = $row['PHONE_NUMBER'];
   $h = $row['JOB_TITLE'];
-  $i = $row['HIRED_DATE'];
-  $j = $row['PROVINCE'];
-  $k = $row['CITY'];
   $l = $row['TYPE'];
 }
 $id = $_GET['id'];
@@ -85,18 +77,6 @@ $id = $_GET['id'];
       </div>
       <div class="form-group row text-left text-primary">
         <div class="col-sm-3" style="padding-top: 5px;">
-          Gender:
-        </div>
-        <div class="col-sm-9">
-          <select class='form-control' name='gender' required>
-            <option value="" disabled selected hidden>Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group row text-left text-primary">
-        <div class="col-sm-3" style="padding-top: 5px;">
           Username:
         </div>
         <div class="col-sm-9">
@@ -121,42 +101,10 @@ $id = $_GET['id'];
       </div>
       <div class="form-group row text-left text-primary">
         <div class="col-sm-3" style="padding-top: 5px;">
-          Contact #:
-        </div>
-        <div class="col-sm-9">
-          <input class="form-control" placeholder="Contact #" name="phone" value="<?php echo $g; ?>" required>
-        </div>
-      </div>
-      <div class="form-group row text-left text-primary">
-        <div class="col-sm-3" style="padding-top: 5px;">
           Role:
         </div>
         <div class="col-sm-9">
           <input class="form-control" placeholder="Role" name="role" value="<?php echo $h; ?>" readonly>
-        </div>
-      </div>
-      <div class="form-group row text-left text-primary">
-        <div class="col-sm-3" style="padding-top: 5px;">
-          Hired Date:
-        </div>
-        <div class="col-sm-9">
-          <input class="form-control" placeholder="Hired Date" name="hireddate" value="<?php echo $i; ?>" required>
-        </div>
-      </div>
-      <div class="form-group row text-left text-primary">
-        <div class="col-sm-3" style="padding-top: 5px;">
-          Province:
-        </div>
-        <div class="col-sm-9">
-          <input class="form-control" placeholder="Province" name="province" value="<?php echo $j; ?>" required>
-        </div>
-      </div>
-      <div class="form-group row text-left text-primary">
-        <div class="col-sm-3" style="padding-top: 5px;">
-          City / Municipality:
-        </div>
-        <div class="col-sm-9">
-          <input class="form-control" placeholder="City / Municipality" name="city" value="<?php echo $k; ?>" required>
         </div>
       </div>
       <div class="form-group row text-left text-primary">

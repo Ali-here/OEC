@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <title>EB First Aid</title>
+    <title>OEC</title>
     <link rel="icon" href="./assets/img/icon.png" type="image">
 
 </head>
@@ -39,9 +39,9 @@
 
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="aboutus.html" class="nav__link">About Us</a></li>
-                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="index.php" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="aboutus.php" class="nav__link">About Us</a></li>
+                        <li class="nav__item"><a href="contact.php" class="nav__link">Contact</a></li>
                         <li class="nav__item">
                             <a href="./admin/pages/login.php" class="btn btn2 btn-primary">
                                 Log In
@@ -136,7 +136,7 @@
                             </p>
 
                             <div class="about_button">
-                                <a href="#contactform">
+                                <a href="aboutus.php">
                                     <button type="submit" class="btn btn3 btn-primary btn-outline-light btn-sm">
                                         <span>Explore More</span>
                                     </button>
@@ -821,7 +821,7 @@
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
                                 <div class="form">
-                                    <form action="" class="form-horizontal form-material text-white" method="POST">
+                                    <form action="contactprocess.php" class="form-horizontal form-material text-white" method="POST">
                                         <div class="form-group mt-3">
                                             <div class="col-md-12  mt-3">
                                                 <input placeholder="Your Name" type="text" name="fullname" class="form-control ">

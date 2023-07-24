@@ -71,7 +71,7 @@ confirm_logged_in();
             <div class="sidebar-brand-icon rotate-n-15">
               <i class=""></i>
             </div>
-            <div class="sidebar-brand-text mx-3">EncoderBytes</div>
+            <div class="sidebar-brand-text mx-3">OEC</div>
           </a>
 
           <!-- Topbar Navbar -->

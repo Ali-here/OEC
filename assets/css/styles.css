@@ -2556,6 +2556,7 @@ img {
     border-radius: 8x;
     background: transparent;
     border: 0;
+    color: white;
     border-bottom: 1px solid white;
     padding: 16px 5px;
     font-style: normal;
