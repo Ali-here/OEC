@@ -34,23 +34,26 @@ $opt .= "</select>";
   <div class="row">
     <div class="col-md-12">
       <div class="card mt-4">
-        <div class="card-header">
-          <h4>Research UR Product Insights </h4>
+        <div class="card-header text-center">
+          <h4>Research Products</h4>
         </div>
         <div class="card-body">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
 
               <form action="" method="GET">
                 <div class="input-group mb-3">
                   <input type="text" name="search" required value="<?php if (isset($_GET['search'])) {
                                                                       echo $_GET['search'];
                                                                     } ?>" class="form-control" placeholder="Search data">
-                  <button type="submit" class="btn btn-primary">Search</button>
+                  <button type="submit" class="btn" style="background: #072d66; color:white;">Search</button>
                 </div>
               </form>
 
             </div>
+            <div class="col-md-2"></div>
+
           </div>
         </div>
       </div>
@@ -207,7 +210,7 @@ if (isset($_GET['search'])) {
                 <div class="col mr-0">
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Sold price range</div>
                   <div class="h6 mb-0 font-weight-bold text-gray-800">
-                    <?php echo "Rs.$maxPrice  - Rs. $minPrice"; ?>
+                    <?php echo "Rs.$minPrice  - Rs. $maxPrice"; ?>
                   </div>
                 </div>
               </div>
@@ -440,7 +443,10 @@ if (isset($_GET['search'])) {
                 $Week8Stockout = $items['8th_week_stockout'];
                 $url = $items['url'];
 
-                $totalStockout = $Week1Stockout + $Week2Stockout + $Week3Stockout + $Week4Stockout + $Week5Stockout + $Week6Stockout + $Week7Stockout + $Week8Stockout;
+                $totalStockoutsingle = $Week1Stockout + $Week2Stockout + $Week3Stockout + $Week4Stockout + $Week5Stockout + $Week6Stockout + $Week7Stockout + $Week8Stockout;
+                $totalshippingcost = $totalStockoutsingle * $shipping_cost;
+                $avgShpcost = $totalshippingcost / 8;
+                $singleTotalsale = $totalStockoutsingle * $price;
                 $totalStock = $Week1Stock + $Week2Stock + $Week3Stock + $Week4Stock + $Week5Stock + $Week6Stock + $Week7Stock + $Week8Stock;
                 $sellThrough = ($totalStockout / $totalStock) * 100;
 
@@ -462,12 +468,9 @@ if (isset($_GET['search'])) {
                   </td>
                   <td>Rs.<?= $price; ?></td>
                   <td>Rs.<?= $price; ?></td>
-                  <td>Rs.<?= $shipping_cost; ?></td>
-                  <td>Rs.<?= $shipping_cost; ?></td>
-                  <td>Rs.<?= $shipping_cost; ?></td>
-                  <td>Rs.<?= $shipping_cost; ?></td>
-                  <td>Rs.<?= $shipping_cost ?></td>
-                  <td>Rs.<?= $totalPrice; ?></td>
+                  <td>Rs.<?= $avgShpcost ?></td>
+                  <td><?= $totalStockoutsingle ?></td>
+                  <td>Rs.<?= $singleTotalsale ?></td>
 
 
 

@@ -23,7 +23,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <!-- ADMIN TABLE -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h4 class="m-2 font-weight-bold text-primary">Admin Account(s)</h4>
+    <h4 class="m-2 font-weight-bold" style="color:#072d66;">Admin Account(s)</h4>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -52,9 +52,9 @@ while ($row = mysqli_fetch_assoc($result)) {
             echo '<td>' . $row['USERNAME'] . '</td>';
             echo '<td>' . $row['TYPE'] . '</td>';
             echo '<td align="right"> <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary" href="us_searchfrm.php?action=edit & id=' . $row['ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
+                              <a type="button" class="btn" style="color: white; background:#072d66;" href="us_searchfrm.php?action=edit & id=' . $row['ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
                             <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary dropdown no-arrow" data-toggle="dropdown" style="color:white;">
+                              <a type="button" class="btn dropdown no-arrow" data-toggle="dropdown" style="background:#072d66; color:white;">
                               ... <span class="caret"></span></a>
                             <ul class="dropdown-menu text-center" role="menu">
                                 <li>
@@ -87,7 +87,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h4 class="m-2 font-weight-bold text-primary">User Accounts</h4>
+    <h4 class="m-2 font-weight-bold" style="color: #072d66;">User Accounts</h4>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -116,9 +116,9 @@ while ($row = mysqli_fetch_assoc($result)) {
             echo '<td>' . $row['USERNAME'] . '</td>';
             echo '<td>' . $row['TYPE'] . '</td>';
             echo '<td align="right"> <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary" href="us_searchfrm.php?action=edit & id=' . $row['ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
+                              <a type="button" class="btn" style="color:white; background:#072d66;" href="us_searchfrm.php?action=edit & id=' . $row['ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
                             <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary dropdown no-arrow" data-toggle="dropdown" style="color:white;">
+                              <a type="button" class="btn dropdown no-arrow" data-toggle="dropdown" style="color:white; background: #072d66;">
                               ... <span class="caret"></span></a>
                             <ul class="dropdown-menu text-center" role="menu">
                                 <li>

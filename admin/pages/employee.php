@@ -24,7 +24,7 @@ include '../includes/sidebar.php';
 
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h4 class="m-2 font-weight-bold text-primary">All Accounts</h4>
+    <h4 class="m-2 font-weight-bold" style="color:#072D66;">All Accounts</h4>
   </div>
 
   <div class="card-body">
@@ -49,9 +49,9 @@ include '../includes/sidebar.php';
             echo '<td>' . $row['JOB_TITLE'] . '</td>';
 
             echo '<td align="right"> <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary" href="emp_searchfrm.php?action=edit & id=' . $row['EMPLOYEE_ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
+                              <a type="button" class="btn" style="background:#072D66; color: white;" href="emp_searchfrm.php?action=edit & id=' . $row['EMPLOYEE_ID'] . '"><i class="fas fa-fw fa-list-alt"></i> Details</a>
                             <div class="btn-group">
-                              <a type="button" class="btn btn-primary bg-gradient-primary dropdown no-arrow" data-toggle="dropdown" style="color:white;">
+                              <a type="button" class="btn dropdown no-arrow" data-toggle="dropdown" style="color:white; background:#072D66;">
                               ... <span class="caret"></span></a>
                             <ul class="dropdown-menu text-center" role="menu">
                                 <li>
