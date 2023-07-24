@@ -16,8 +16,8 @@ try {
     // Insert user data
     mysqli_query($db, "INSERT INTO users (ID, EMPLOYEE_ID, USERNAME, PASSWORD, TYPE_ID)
                        VALUES (Null,'{$emp_id}','{$username}',sha1('{$password}'),'2')");
-
-    header('location:login.php');
+    echo '<script>alert("Account has Been successfully create"); window.location = "login.php";</script>';
+    header('location:');
 } catch (Exception $e) {
     // If a unique key constraint error occurs (e.g., email already exists in the database), show an alert
     if (strpos($e->getMessage(), 'Duplicate entry') !== false) {

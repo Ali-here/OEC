@@ -40,15 +40,15 @@ while ($row = mysqli_fetch_array($result2)) {
 $id = $_GET['id'];
 ?>
 <center>
-  <div class="card shadow mb-4 col-xs-12 col-md-8 border-bottom-primary">
+  <div class="card shadow mb-4 col-xs-12 col-md-8 " style="border-bottom: 5px solid #072d66;">
     <div class="card-header py-3">
-      <h4 class="m-2 font-weight-bold text-primary"><?php echo $a; ?>'s Detail</h4>
+      <h4 class="m-2 font-weight-bold" style="color: #072d66;"><?php echo $a; ?>'s Detail</h4>
     </div>
-    <a href="user.php?action=add" type="button" class="btn btn-primary bg-gradient-primary">Back</a>
+    <a href="user.php?action=add" type="button" class="btn" style="background:#072d66; color: white;">Back</a>
     <div class="card-body">
 
       <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
+        <div class="col-sm-3" style="color: #072d66;">
           <h5>
             Full Name<br>
           </h5>
@@ -60,7 +60,7 @@ $id = $_GET['id'];
         </div>
       </div>
       <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
+        <div class="col-sm-3" style="color: #072d66;">
           <h5>
             Username<br>
           </h5>
@@ -72,7 +72,7 @@ $id = $_GET['id'];
         </div>
       </div>
       <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
+        <div class="col-sm-3" style="color: #072d66;">
           <h5>
             Email<br>
           </h5>
@@ -85,7 +85,7 @@ $id = $_GET['id'];
       </div>
       <!-- Contact # is missing here -->
       <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
+        <div class="col-sm-3" style="color: #072d66;">
           <h5>
             Role<br>
           </h5>
@@ -97,7 +97,7 @@ $id = $_GET['id'];
         </div>
       </div>
       <div class="form-group row text-left">
-        <div class="col-sm-3 text-primary">
+        <div class="col-sm-3" style="color: #072d66;">
           <h5>
             Account Type<br>
           </h5>

@@ -32,18 +32,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 $opt .= "</select>";
 
-$query = 'SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, j.JOB_TITLE, HIRED_DATE, l.PROVINCE, l.CITY FROM employee e join location l on l.LOCATION_ID=e.LOCATION_ID join job j on j.JOB_ID=e.JOB_ID WHERE EMPLOYEE_ID =' . $_GET['id'];
+$query = 'SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL,  j.JOB_TITLE FROM employee e join job j on j.JOB_ID=e.JOB_ID WHERE EMPLOYEE_ID =' . $_GET['id'];
 $result = mysqli_query($db, $query) or die(mysqli_error($db));
 while ($row = mysqli_fetch_array($result)) {
   $zz = $row['EMPLOYEE_ID'];
   $fname = $row['FIRST_NAME'];
   $lname = $row['LAST_NAME'];
   $email = $row['EMAIL'];
-  $phone = $row['PHONE_NUMBER'];
+
   $jobb = $row['JOB_TITLE'];
-  $hdate = $row['HIRED_DATE'];
-  $prov = $row['PROVINCE'];
-  $cit = $row['CITY'];
 }
 $id = $_GET['id'];
 ?>
@@ -74,32 +71,13 @@ $id = $_GET['id'];
         </div>
         <div class="form-group row text-left text-warning">
           <div class="col-sm-3" style="padding-top: 5px;">
-            Gender:
-          </div>
-          <div class="col-sm-9">
-            <select class='form-control' name='gender' required>
-              <option value="" disabled selected hidden>Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group row text-left text-warning">
-          <div class="col-sm-3" style="padding-top: 5px;">
             Email:
           </div>
           <div class="col-sm-9">
             <input class="form-control" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
           </div>
         </div>
-        <div class="form-group row text-left text-warning">
-          <div class="col-sm-3" style="padding-top: 5px;">
-            Contact #:
-          </div>
-          <div class="col-sm-9">
-            <input class="form-control" placeholder="Phone Number" name="phone" value="<?php echo $phone; ?>" required>
-          </div>
-        </div>
+
         <div class="form-group row text-left text-warning">
           <div class="col-sm-3" style="padding-top: 5px;">
             Role:
@@ -108,33 +86,6 @@ $id = $_GET['id'];
             <input class="form-control" placeholder="Role" name="jobs" value="<?php echo $jobb; ?>" disabled>
           </div>
         </div>
-        <div class="form-group row text-left text-warning">
-          <div class="col-sm-3" style="padding-top: 5px;">
-            Hired Date:
-          </div>
-          <div class="col-sm-9">
-            <input placeholder="Hired Date" type="date" id="FromDate" name="hireddate" value="<?php echo $hdate; ?>" class="form-control" required>
-          </div>
-        </div>
-        <div class="form-group row text-left text-warning">
-          <div class="col-sm-3" style="padding-top: 5px;">
-            Province:
-          </div>
-          <div class="col-sm-9">
-            <input class="form-control" placeholder="Province" name="province" value="<?php echo $prov; ?>" required>
-          </div>
-        </div>
-        <div class="form-group row text-left text-warning">
-          <div class="col-sm-3" style="padding-top: 5px;">
-            City / Municipality:
-          </div>
-          <div class="col-sm-9">
-            <input class="form-control" placeholder="City / Municipality" name="city" value="<?php echo $cit; ?>" required>
-          </div>
-        </div>
-
-
-
         <hr>
 
         <button type="submit" class="btn btn-warning btn-block"><i class="fa fa-edit fa-fw"></i>Update</button>

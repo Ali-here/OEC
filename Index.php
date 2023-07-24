@@ -77,7 +77,7 @@
                             <div class="hero_button d-flex justify-content-center row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-2">
-                                    <a href="#contactform">
+                                    <a href="#services">
                                         <button type="submit" class="btn btn3 btn-primary btn-outline-light btn-sm">
                                             <span>Get Started</span>
                                         </button>
